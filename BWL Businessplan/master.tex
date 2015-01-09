@@ -1,0 +1,34 @@
+\documentclass{scrartcl}
+\usepackage{styles}
+
+\begin{document}
+
+%Titleseite
+	\pagenumbering{gobble}	%Kein Pagenumbering
+	\title{\missingText{Hier k"onnte Ihr Titel stehen}}	%Name der Firma
+	\author{Hendrik Karwanni \and Marco Zidorn}
+	\date{\missingText{Hier k"onnte Ihr Erstellungsdatum stehen}}	%Erstellungsdatum
+	\maketitle
+	\tryincludegraphics{Bilder/Logo.jpg}	%Firmenlogo
+	\clearpage
+
+%Inhaltsverzeichnis, Tabellen, Abbildungen
+	\pagenumbering{Roman}
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\clearpage
+
+%Abschnitte
+	\pagenumbering{arabic}
+	\include{executive_summary}	% Zusammenfassung (ca. 1/2 Seiten)
+	\include{unternehmensziele}	% Unternehmensziele (ca. 1/2 Seiten)
+	\include{produkt}	% Produkt (ca. 1 Seite)
+	\include{branche_und_markt}	% Branche und Markt (ca. 1 1/2 Seiten)
+	\include{geschaeftssystem_und_organisation}	% Geschäftssystem und Organisation (ca. 3/4 Seiten)
+	\include{marketing-mix}	% Marketing-Mix (ca. 1 1/2 Seiten)
+	\include{management_und_schluesselpositionen}	% Management und Schlüsselpositionen (ca. 1 Seite)
+	\include{realisierungsplanung}	% Realisierungsplanung (ca. 1 1/2 Seiten)
+	\include{drei-jahres-planung}	% Drei-Jahres-Plan (ca. 1 Seiten)
+	\include{finanzbedarf}	% Finanzbedarf (ca. 1 - 1 1/2 Seiten)
+\end{document}

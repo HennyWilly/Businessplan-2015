@@ -1,0 +1,24 @@
+\ProvidesPackage{Styles}%
+
+% Includes
+\RequirePackage[ngerman]{babel}% Deutsche Styles
+\RequirePackage[utf8]{inputenc}% Input-Formatierung
+\RequirePackage[T1]{fontenc}% Ausgabe-Formatierung
+\RequirePackage{color}% Farbige Texte
+\RequirePackage{ifthen}% If-Else
+\RequirePackage{graphicx}% Bilder einfügen
+
+% Funktionen
+\newcommand{\kursiv}[1]{\textit{#1}}%
+\newcommand{\boldText}[1]{\textbf{#1}}%
+\newcommand{\missingText}[1]{\textcolor{red}{\boldText{#1}}}%
+\newcommand{\missingFootnote}[1]{\footnote{\missingText{#1}}}%
+\newcommand{\tryincludegraphics}[2][]{%
+	\IfFileExists{#2}{%
+		\includegraphics[#1]{#2}%
+	}%
+	%else
+	{%
+		\fbox{\missingText{Hier k\"onnte Ihr Bild '#2' stehen!}}%
+	}%
+}%
