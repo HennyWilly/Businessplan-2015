@@ -1,0 +1,37 @@
+\documentclass{scrartcl}
+\usepackage{styles}
+
+\begin{document}
+	
+%Titleseite
+	\pagenumbering{gobble}	%Kein Pagenumbering
+	\title{Herstellung und Vertrieb von Kaffeevollautomaten mit NFC-Technologie} %Name der Firma
+	\author{Alexander Diener \and Hendrik Karwanni \and Marco Zidorn}
+	\date{16. Januar 2015}	%Erstellungsdatum
+	\maketitle
+	\tryincludegraphics[width=\textwidth]{Bilder/Logo2.jpg}	%Firmenlogo: lässt sich erstellen bei http://www.freelogoservices.com/de
+	\clearpage
+
+%Inhaltsverzeichnis, Tabellen, Abbildungen
+	\pagenumbering{Roman}
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\clearpage
+
+%Abschnitte
+	\pagenumbering{arabic}
+	\include{executive_summary}	% Zusammenfassung (ca. 1/2 Seiten)
+	\include{unternehmensziele}	% Unternehmensziele (ca. 1/2 Seiten) <--Marco
+	\include{produkt}	% Produkt (ca. 1 Seite) <--Hendrik
+	\include{branche_und_markt}	% Branche und Markt (ca. 1 1/2 Seiten) <--Marco
+	\include{geschaeftssystem_und_organisation}	% Geschäftssystem und Organisation (ca. 3/4 Seiten) <--Alexander
+	\include{marketing-mix}	% Marketing-Mix (ca. 1 1/2 Seiten) <--Marco
+	\include{management_und_schluesselpositionen}	% Management und Schlüsselpositionen (ca. 1 Seite) <--Hendrik 
+	\include{realisierungsplanung}	% Realisierungsplanung (ca. 1 1/2 Seiten) <--Hendrik
+	\include{drei-jahres-planung}	% Drei-Jahres-Plan (ca. 1 Seiten) <--Alexander
+	\include{finanzbedarf}	% Finanzbedarf (ca. 1 - 1 1/2 Seiten) <--Alexander
+	
+%Anhang
+   \include{anhang}	
+\end{document}
